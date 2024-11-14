@@ -1,8 +1,8 @@
-import { useState } from "react"
+// import { useState } from "react"
 import Headnav from "./headnav"
 
 const Navbar = ()=>{
-    const [toggleNav, setToggleNav] = useState(false)
+    // const [toggleNav, setToggleNav] = useState(false)
     return(
         <div>
             <Headnav/>
