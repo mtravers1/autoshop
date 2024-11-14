@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'banner': "url('https://thecarkeyreplacementcenter.myshopify.com/cdn/shop/files/image-1880x360.png?v=1728168454&width=1880')",
+      }
+    }
   },
   plugins: [],
 }

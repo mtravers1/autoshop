@@ -1,5 +1,6 @@
 
 import './App.css'
+import CarSelect from './components/navbar/carSelector';
 import Navbar from './components/navbar/navbar'
 import data from './data/vehicles.json'
 // interface vehicles{
@@ -50,21 +51,16 @@ function App() {
                         </select>
                     </div>
                 </div>
-        <div className='flex items-center justify-center h-64'>
-          <form >
-          <select>
-      {data.map((i)=>(
-        <>
-        <option>{i.make_name}</option>
+        <div  style={{backgroundImage:'url(https://thecarkeyreplacementcenter.myshopify.com/cdn/shop/files/image-1880x360.png?v=1728168454&width=1880)'}} className='bg flex items-center justify-center h-64'>
+          <form className='flex'>
+
+
+
+  <CarSelect/>
         
-        </>
-      ))}
-
-
-
-    </select>  
         
-          <button>Search</button><button>refresh</button>
+          <button className='border-black font-bold bg-gray-200'>Search</button>
+          <button className='border-black font-bold bg-gray-200'>refresh</button>
           </form>
         </div>
         
