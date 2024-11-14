@@ -1,6 +1,6 @@
 
 import './App.css'
-import CarSelect from './components/navbar/carSelector';
+import CarSelect from './components/navbar/carSelect'
 import Navbar from './components/navbar/navbar'
 import data from './data/vehicles.json'
 // interface vehicles{
