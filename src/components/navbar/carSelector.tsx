@@ -12,13 +12,7 @@ interface CarModel {
     model_styles?: any;  // You can define this more specifically if needed
   }
   
-  // Define the type for a car make
-  interface CarMake {
-    make_id: number;
-    make_name: string;
-    make_slug: string;
-    models: any;  // models is an object with model names as keys
-  }
+
 
 const CarSelect = () => {
     const [selectedMake, setSelectedMake] = useState<string>("");
