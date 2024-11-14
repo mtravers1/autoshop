@@ -1,7 +1,7 @@
 
 
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import carDataJson from '../../data/vehicles.json'
 interface CarModel {
     model_id: number;
