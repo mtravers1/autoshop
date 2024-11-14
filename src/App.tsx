@@ -1,4 +1,3 @@
-import { useState } from 'react'
 
 import './App.css'
 import Navbar from './components/navbar/navbar'
@@ -28,7 +27,6 @@ function App() {
   console.log(mappedData);  // Output: ["Toyota", "Honda", "Ford"]
   
   // Log the Set
-  const category =['Make', 'Model', 'Year']
 
   return (
     <>
