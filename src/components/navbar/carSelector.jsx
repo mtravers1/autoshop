@@ -4,20 +4,26 @@
 import React, { useState } from 'react';
 import carData from '../../data/vehicles.json'
 // Define types for the data
-interface CarModel {
-    model_id: number;
-    model_name: string;
-    vehicle_type: string;
-    years: number[];
-    model_styles?: any;  // You can define this more specifically if needed
-  }
+// interface CarModel {
+//     model_id: number;
+//     model_name: string;
+//     vehicle_type: string;
+//     years: number[];
+//     model_styles?: any;  // You can define this more specifically if needed
+//   }
   
-
+//   // Define the type for a car make
+//   interface CarMake {
+//     make_id: number;
+//     make_name: string;
+//     make_slug: string;
+//     models: { [key: string]: CarModel }  // models is an object with model names as keys
+//   }
 
 const CarSelect = () => {
-    const [selectedMake, setSelectedMake] = useState<string>("");
-    const [selectedModel, setSelectedModel] = useState<string>("");
-    const [selectedYear, setSelectedYear] = useState<number | string>("");
+    const [selectedMake, setSelectedMake] = useState("");
+    const [selectedModel, setSelectedModel] = useState("");
+    const [selectedYear, setSelectedYear] = useState("");
   // Find the make selected
   const selectedCarMake = selectedMake ? carData.find(make => make.make_name === selectedMake) : null;
   
@@ -45,7 +51,7 @@ const CarSelect = () => {
 
       <select className="h-10" value={selectedYear} onChange={(e) => setSelectedYear(e.target.value)} disabled={!selectedModel}>
         <option value="">Select Year</option>
-        {years.map((year:any) => (
+        {years.map((year) => (
           <option key={year} value={year}>{year}</option>
         ))}
       </select>
