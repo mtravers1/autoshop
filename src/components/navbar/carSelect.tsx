@@ -51,7 +51,7 @@ const CarSelect = () => {
 
       <select className="h-10" value={selectedYear} onChange={(e) => setSelectedYear(e.target.value)} disabled={!selectedModel}>
         <option value="">Select Year</option>
-        {years.map((year) => (
+        {years.map((year:any) => (
           <option key={year} value={year}>{year}</option>
         ))}
       </select>
