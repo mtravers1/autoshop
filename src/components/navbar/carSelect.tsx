@@ -2,6 +2,7 @@
 
 
 import { useState } from 'react';
+import './carSelect.css'
 import carDataJson from '../../data/vehicles.json'
 interface CarModel {
     model_id: number;
@@ -35,8 +36,22 @@ const CarSelect = () => {
   // Get years for the selected model
   const years = selectedModel && models[selectedModel] ? models[selectedModel].years : [];
 
+  const handleSubmit = (e:any)=>{
+    e.preventDefault()
+    console.log(
+      'Make:'+selectedMake, 'Model:'+selectedModel, 'Years:'+selectedYear
+    )
+    alert(selectedMake+ selectedModel + selectedYear)
+  }
+
+
+
   return (
     <div>
+        <div  style={{backgroundImage:'url(https://thecarkeyreplacementcenter.myshopify.com/cdn/shop/files/image-1880x360.png?v=1728168454&width=1880)'}} className='bg flex items-center justify-center h-64'>
+        <form id="carSelectform" onSubmit={handleSubmit} className='flex'>
+        <h1 className='text-white text-center text-2xl'>Vehicle Search</h1>
+
       <select className="h-10" value={selectedMake} onChange={(e) => { setSelectedMake(e.target.value); setSelectedModel(""); setSelectedYear(""); }}>
         <option value="">Select Make</option>
         {carData.map((make) => (
@@ -57,7 +72,12 @@ const CarSelect = () => {
           <option key={year} value={year}>{year}</option>
         ))}
       </select>
+      <button className='border bg-gray-50'>Search</button>
+    
+    </form>
     </div>
+    </div>
+   
   );
 };
   

@@ -51,18 +51,14 @@ function App() {
                         </select>
                     </div>
                 </div>
-        <div  style={{backgroundImage:'url(https://thecarkeyreplacementcenter.myshopify.com/cdn/shop/files/image-1880x360.png?v=1728168454&width=1880)'}} className='bg flex items-center justify-center h-64'>
-          <form className='flex'>
+   
 
 
 
   <CarSelect/>
         
         
-          <button className='border-black font-bold bg-gray-200'>Search</button>
-          <button className='border-black font-bold bg-gray-200'>refresh</button>
-          </form>
-        </div>
+         
         
         
       </div>

@@ -1,0 +1,20 @@
+#menu li a{
+    font-size: 24px;
+}
+#menu li a:hover{
+    color:red
+}
+
+#mobilenav{
+    display: none;
+}
+
+
+@media(max-width:600px){
+    #mobilenav{
+        display: flex;
+    }
+    #navi{
+        display: none;
+    }
+}

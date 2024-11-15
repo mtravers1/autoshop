@@ -1,12 +1,41 @@
-// import { useState } from "react"
+import { useState } from "react"
 import Headnav from "./headnav"
+import logo from '../../photos/logo.png'
+import './navbar.css'
+import { FaShoppingCart } from "react-icons/fa";
 
 const Navbar = ()=>{
-    // const [toggleNav, setToggleNav] = useState(false)
+    const [toggleNav, setToggleNav] = useState(false)
+    const Toggle = ()=>{
+        setToggleNav(!toggleNav)
+    }
     return(
         <div>
             <Headnav/>
-            <div id="nav" className="sm:hidden">
+            <div id="navi" className="flex justify-around items-center">
+                <img height={100} width={100} src={logo}/>
+
+
+                <div >
+                    <ul id='menu' className="flex">
+                        <li className="m-3">
+                            <a>Home</a>
+                        </li>
+                        <li  className="m-3">
+                            <a>Products</a>
+                        </li>
+                        <li  className="m-3">
+                            <a>About</a> 
+                        </li>
+                        
+                    </ul>
+                </div>
+
+
+                <div>
+                <FaShoppingCart size={30}/>
+
+                </div>
                 {/* <div id='navtop' className="flex justify-around items-center">
                     <div  id='topleft' className="flex m-3 items-center">
                         <p className="font-bold text-xl">THECARKEYREPLACEMENTCENTER</p>
@@ -36,8 +65,39 @@ const Navbar = ()=>{
 
                     </div>
                 </div> */}
-                
+           
             </div>
+            <div id="mobilenav" className="flex flex-row items-center justify-between ">
+                <img height={100} width={100} src={logo}/>
+                <div className="">
+            <button className="text-4xl" onClick={()=>Toggle()}>menu</button>
+            
+            
+            </div>
+            <FaShoppingCart size={50}/>
+
+</div>
+{toggleNav && (
+                <div className="flex justify-center items-center" >
+                    <ul id='menu' className="flex flex-col">
+                        <li className="m-3">
+                            <a>Home</a>
+                        </li>
+                        <li  className="m-3">
+                            <a>Products</a>
+                        </li>
+                        <li  className="m-3">
+                            <a>About</a> 
+                        </li>
+                        
+                    </ul>
+
+
+               
+                
+
+                </div>
+            )}
         </div>
     )
 }
