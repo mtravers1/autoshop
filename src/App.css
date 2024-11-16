@@ -2,6 +2,12 @@
 background-color: blue;
 
 }
+@media(max-width:600px){
+  .middlesection{
+    flex-direction: column;
+  }
+}
+
 
 
 /* #root {
