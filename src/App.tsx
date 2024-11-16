@@ -1,5 +1,4 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";// interface vehicles{
+import { Routes, Route } from "react-router-dom";// interface vehicles{
 import Home from "./pages/home";
 //   make:String;
 //   model:String;
